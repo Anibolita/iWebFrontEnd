@@ -30,7 +30,8 @@ export default {
                 "precio" : this.precio,
                 "latitud" : lat.toString(),
                 "longitud" : lng.toString(),
-                "vendedor" : nombreSinCorreo
+                "vendedor" : nombreSinCorreo,
+                "comentarios" : []
             };
 
             axios.post("https://2kl0wm.deta.dev/appVivienda/viviendas", objeto).then((result) => {
