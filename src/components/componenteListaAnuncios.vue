@@ -17,6 +17,9 @@ export default {
     }else{
       axios.get("https://2kl0wm.deta.dev/appVivienda/viviendas").then(response => this.viviendas = response.data);
     }
+  },
+  beforeUpdate() { 
+    axios.get("https://2kl0wm.deta.dev/appVivienda/viviendas").then(response => this.viviendas = response.data);
   }
 };
 
