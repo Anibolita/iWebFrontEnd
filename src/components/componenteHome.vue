@@ -6,7 +6,12 @@ export default{
             busqueda : " ",
             token: localStorage.getItem('Token')
         };
-    }
+    },
+    methods: {
+    getPlaceholder() {
+      return "Busque una vivienda segun su Provincia";
+    },
+  },
 };
 
 </script>
@@ -20,7 +25,7 @@ export default{
     </div>
 
     <div class="buscar">
-        <input v-model="busqueda" :placeholder="Busque su primera vivienda introduciendo una Provincia" />
+        <input v-model="busqueda" :placeholder="getPlaceholder()" />
         <router-link :to="{ name: 'ListaViviendasLocalidad', params: { localidad: busqueda  }}" ><a class="boton_personalizado" href="">Buscar</a></router-link>
     </div>
 
