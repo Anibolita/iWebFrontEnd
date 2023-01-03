@@ -3,15 +3,19 @@
 export default{
     data: function(){
         return{
-            busqueda : " ",
+            busqueda : "",
             token: localStorage.getItem('Token')
         };
     },
     methods: {
     getPlaceholder() {
-      return "Busque una vivienda segun su Provincia";
+      return "Busque una vivienda segun su provincia";
     },
-  },
+    getBusqueda(){
+        return " " + this.busqueda;
+    }
+    }
+  
 };
 
 </script>
@@ -26,7 +30,7 @@ export default{
 
     <div class="buscar">
         <input v-model="busqueda" :placeholder="getPlaceholder()" />
-        <router-link :to="{ name: 'ListaViviendasLocalidad', params: { localidad: busqueda  }}" ><a class="boton_personalizado" href="">Buscar</a></router-link>
+        <router-link :to="{ name: 'ListaViviendasLocalidad', params: { localidad: getBusqueda()  }}" ><a class="boton_personalizado" href="">Buscar</a></router-link>
     </div>
 
     <table class="tabla-Inicio">    

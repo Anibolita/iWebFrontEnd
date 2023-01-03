@@ -24,7 +24,10 @@ export default {
 
 
 <template>
-      <table class="tabla-Todo">
+      <h2 v-if="this.viviendas.length == 0">
+        No existen viviendas en esta provincia
+      </h2>
+      <table v-else class="tabla-Todo">
         <tr class="fila-encabezado">
             <td class="celda-img" ></td>
             <td class="celda-text" >Dirección</td>
@@ -49,6 +52,7 @@ export default {
 
         </tr>
       </table>
+
 </template>
 
 <style>
