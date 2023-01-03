@@ -20,7 +20,7 @@ export default{
     </div>
 
     <div class="buscar">
-        <input v-model="busqueda" placeholder="Busque su primera vivienda" />
+        <input v-model="busqueda" :placeholder="Busque su primera vivienda introduciendo una Provincia" />
         <router-link :to="{ name: 'ListaViviendasLocalidad', params: { localidad: busqueda  }}" ><a class="boton_personalizado" href="">Buscar</a></router-link>
     </div>
 
