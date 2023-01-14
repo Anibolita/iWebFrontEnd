@@ -19,8 +19,8 @@ export default {
     }
   },
   beforeUpdate() { 
-        // Simple GET request using axios
-        if(this.$route.params.localidad){
+    // Simple GET request using axios
+    if(this.$route.params.localidad){
       var parametro = this.$route.params.localidad;
       parametro = parametro.substring(1,parametro.length);
       axios.get("https://2kl0wm.deta.dev/appVivienda/viviendas/"+parametro).then(response => this.viviendas = response.data);

@@ -52,7 +52,7 @@ export default {
 
       axios({
         method: 'put',
-        url: 'http://localhost:8001/viviendas/' + this.vivienda._id,
+        url: 'https://2kl0wm.deta.dev/appVivienda/viviendas/' + this.vivienda._id,
         headers: { 'Content-Type': 'application/json' },
         data: JSON.stringify(this.vivienda)
       })

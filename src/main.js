@@ -12,6 +12,5 @@ app.use(gAuthPlugin, {
   prompt: 'consent',
 })
 */
-
 app.use(router)
 app.mount('#app')

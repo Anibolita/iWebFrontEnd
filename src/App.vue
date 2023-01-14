@@ -34,6 +34,7 @@ export default{
     </div>
 
   </header>
+  
   <div padding-top="20px">
     <router-view/>
   </div>
